@@ -1,0 +1,841 @@
+﻿/*
+* Arma2 voice commands script by Suchy adapted by Pasdu
+*
+* Say "enable voice commands" to begin.
+*/
+
+if said("vox up") or said("listen",5) or said("begin listening") then
+  var.listen=true
+  say("go ahead")
+end if
+
+if said("vox down") or said("don't listen",5) or said("stop listening") then
+  var.listen=false
+  say("done")
+end if
+
+if var.listen ==true then
+
+   //Unit selection
+   
+   if said("squad",1) then
+         press(key.Console)
+         release(key.Console)
+   end if
+
+   if said("2",1) then
+      press(key.F2)
+      release(key.F2)
+   end if
+
+   if said("3",1) then
+      press(key.F3)
+      release(key.F3)
+   end if
+
+   if said("4",6) then
+      press(key.F4)
+      release(key.F4)
+   end if
+
+   if said("5",1) then
+      press(key.F5)
+      release(key.F5)
+   end if
+
+   if said("6",1) then
+      press(key.F6)
+      release(key.F6)
+   end if
+
+   if said("7",1) then
+      press(key.F7)
+      release(key.F7)
+   end if
+
+   if said("8",1) then
+      press(key.F8)
+      release(key.F8)
+   end if
+
+   if said("9",1) then
+      press(key.F9)
+      release(key.F9)
+   end if
+
+   if said("10",1) then
+      press(key.F10)
+      release(key.F10)
+   end if
+
+   if said("11",1) then
+      press(key.F12)
+      release(key.F12)
+      wait 50 ms
+      press(key.F1)
+      release(key.F1)
+      wait 50 ms
+      press(key.F11)
+      release(key.F11)
+   end if
+
+   if said("12",1) then
+      press(key.F12)
+      release(key.F12)
+      wait 50 ms
+      press(key.F2)
+      release(key.F2)
+      wait 50 ms
+      press(key.F11)
+      release(key.F11)
+   end if
+
+   if said("13",1) then
+      press(key.F12)
+      release(key.F12)
+      wait 50 ms
+      press(key.F3)
+      release(key.F3)
+      wait 50 ms
+      press(key.F11)
+      release(key.F11)
+   end if
+
+   if said("14",6) then
+      press(key.F12)
+      release(key.F12)
+      wait 50 ms
+      press(key.F4)
+      release(key.F4)
+      wait 50 ms
+      press(key.F11)
+      release(key.F11)
+   end if
+
+   if said("target that",1) or said("board that",4) or said("Move there") then
+      press(key.enter)
+      release(key.enter)
+   end if
+
+   if said("watch that",1) then
+      press(alt+enter)
+   end if
+
+   //Engage
+
+   if said("open fire",1) then
+      press(key.3)
+      release(key.3)
+      wait 50 ms
+      press(key.1)
+      release(key.1)
+   end if
+
+   if said("hold fire",1) then
+      press(key.3)
+      release(key.3)
+      wait 50 ms
+      press(key.2)
+      release(key.2)
+   end if
+
+   if said("fire",1) then
+      press(key.3)
+      release(key.3)
+      wait 50 ms
+      press(key.3)
+      release(key.3)
+   end if
+
+   if said("engage",5) then
+      press(key.3)
+      release(key.3)
+      wait 50 ms
+      press(key.4)
+      release(key.4)
+   end if
+
+   if said("engage at will") then
+      press(key.3)
+      release(key.3)
+      wait 50 ms
+      press(key.5)
+      release(key.5)
+   end if
+
+   if said("disengage") then
+      press(key.3)
+      release(key.3)
+      wait 50 ms
+      press(key.6)
+      release(key.6)
+   end if
+
+   if said("scan horizon") or said("look around") then
+      press(key.3)
+      release(key.3)
+      wait 50 ms
+      press(key.7)
+      release(key.7)
+   end if
+
+   if said("watch north") then
+      press(key.3)
+      release(key.3)
+      wait 50 ms
+      press(key.8)
+      release(key.8)
+      wait 50 ms
+      press(key.1)
+      release(key.1)
+   end if
+
+   if said("watch northeast") then
+      press(key.3)
+      release(key.3)
+      wait 50 ms
+      press(key.8)
+      release(key.8)
+      wait 50 ms
+      press(key.2)
+      release(key.2)
+   end if
+
+   if said("watch east") then
+      press(key.3)
+      release(key.3)
+      wait 50 ms
+      press(key.8)
+      release(key.8)
+      wait 50 ms
+      press(key.3)
+      release(key.3)
+   end if
+
+   if said("watch southeast") then
+      press(key.3)
+      release(key.3)
+      wait 50 ms
+      press(key.8)
+      release(key.8)
+      wait 50 ms
+      press(key.4)
+      release(key.4)
+   end if
+
+   if said("watch south") then
+      press(key.3)
+      release(key.3)
+      wait 50 ms
+      press(key.8)
+      release(key.8)
+      wait 50 ms
+      press(key.5)
+      release(key.5)
+   end if
+
+   if said("watch southwest") then
+      press(key.3)
+      release(key.3)
+      wait 50 ms
+      press(key.8)
+      release(key.8)
+      wait 50 ms
+      press(key.6)
+      release(key.6)
+   end if
+
+   if said("watch west") then
+      press(key.3)
+      release(key.3)
+      wait 50 ms
+      press(key.8)
+      release(key.8)
+      wait 50 ms
+      press(key.7)
+      release(key.7)
+   end if
+
+   if said("watch northwest") then
+      press(key.3)
+      release(key.3)
+      wait 50 ms
+      press(key.8)
+      release(key.8)
+      wait 50 ms
+      press(key.8)
+      release(key.8)
+   end if
+
+   if said("Suppressive fire") then
+      press(key.3)
+      release(key.3)
+      wait 50 ms
+      press(key.9)
+      release(key.9)
+   end if
+
+
+   //Combat mode
+
+   if said("stealth", 5) then
+      press(key.7)
+      release(key.7)
+      wait 50 ms
+      press(key.1)
+      release(key.1)
+   end if
+
+   if said("danger", 5) then
+      press(key.7)
+      release(key.7)
+      wait 50 ms
+      press(key.2)
+      release(key.2)
+   end if
+
+   if said("stay frosty") then
+      press(key.7)
+      release(key.7)
+      wait 50 ms
+      press(key.3)
+      release(key.3)
+   end if
+
+   if said("at ease") then
+      press(key.7)
+      release(key.7)
+      wait 50 ms
+      press(key.4)
+      release(key.4)
+   end if
+
+   if said("standing", 5) then
+      press(key.7)
+      release(key.7)
+      wait 50 ms
+      press(key.6)
+      release(key.6)
+   end if
+
+   if said("crouch", 5) then
+      press(key.7)
+      release(key.7)
+      wait 50 ms
+      press(key.7)
+      release(key.7)
+   end if
+
+   if said("prone", 5) then
+      press(key.7)
+      release(key.7)
+      wait 50 ms
+      press(key.8)
+      release(key.8)
+   end if
+
+   if said("copy stance", 5) then
+      press(key.7)
+      release(key.7)
+      wait 50 ms
+      press(key.9)
+      release(key.9)
+   end if
+
+
+   //Reply
+
+   if said("ready", 5) then
+      press(key.0)
+      release(key.0)
+      wait 50 ms
+      press(key.1)
+      release(key.1)
+   end if
+
+   if said("negative", 5) then
+      press(key.0)
+      release(key.0)
+      wait 50 ms
+      press(key.2)
+      release(key.2)
+   end if
+
+   if said("target in sight", 4) then
+      press(key.0)
+      release(key.0)
+      wait 50 ms
+      press(key.3)
+      release(key.3)
+   end if
+
+   if said("no target", 4) then
+      press(key.0)
+      release(key.0)
+      wait 50 ms
+      press(key.4)
+      release(key.4)
+   end if
+
+   if said("repeat", 4) then
+      press(key.0)
+      release(key.0)
+      wait 50 ms
+      press(key.6)
+      release(key.6)
+   end if
+
+   if said("board", 4) then
+      press(key.4)
+      release(key.4)
+   end if
+
+   if said("you drive",3) then
+      press(key.4)
+      release(key.4)
+      wait 50 ms
+      press(key.2)
+      release(key.2)
+      wait 50 ms
+      press(key.2)
+      release(key.2)
+   end if
+
+   if said("gunner",5) then
+      press(key.4)
+      release(key.4)
+      wait 50 ms
+      press(key.2)
+      release(key.2)
+      wait 50 ms
+      press(key.4)
+      release(key.4)
+   end if
+
+   if said("disembark",2) or said("get out",2) then
+      press(key.4)
+      release(key.4)
+      wait 50 ms
+      press(key.1)
+      release(key.1)
+   end if
+
+
+   //Status
+   if said("need medical",5) then
+      press(key.5)
+      release(key.5)
+      wait 50 ms
+      press(key.1)
+      release(key.1)
+      wait 50 ms
+      press(key.1)
+      release(key.1)
+   end if
+
+   if said("need ambulance",5) then
+      press(key.5)
+      release(key.5)
+      wait 50 ms
+      press(key.1)
+      release(key.1)
+      wait 50 ms
+      press(key.2)
+      release(key.2)
+   end if
+
+   if said("need repair truck",5) then
+      press(key.5)
+      release(key.5)
+      wait 50 ms
+      press(key.3)
+      release(key.3)
+      wait 50 ms
+      press(key.1)
+      release(key.1)
+   end if
+
+   if said("need ammo truck",5) then
+      press(key.5)
+      release(key.5)
+      wait 50 ms
+      press(key.1)
+      release(key.1)
+      wait 50 ms
+      press(key.4)
+      release(key.4)
+   end if
+
+   if said("need fuel truck",5) then
+      press(key.5)
+      release(key.5)
+      wait 50 ms
+      press(key.1)
+      release(key.1)
+      wait 50 ms
+      press(key.5)
+      release(key.5)
+   end if
+
+   if said("fuel low",5) then
+      press(key.5)
+      release(key.5)
+      wait 50 ms
+      press(key.2)
+      release(key.2)
+   end if
+
+   if said("ammo low",5) then
+      press(key.5)
+      release(key.5)
+      wait 50 ms
+      press(key.3)
+      release(key.3)
+   end if
+
+   if said("medic",5) or said("I'm hit") then
+      press(key.5)
+      release(key.5)
+      wait 50 ms
+      press(key.4)
+      release(key.4)
+   end if
+
+   if said("status report",3) or said("report in",3) or said("sitrep", 3) then
+      press(key.5)
+      release(key.5)
+      wait 50 ms
+      press(key.5)
+      release(key.5)
+   end if
+
+   if said("taking fire",5) then
+      press(key.5)
+      release(key.5)
+      wait 50 ms
+      press(key.6)
+      release(key.6)
+   end if
+
+   if said("got him",5) then
+      press(key.5)
+      release(key.5)
+      wait 50 ms
+      press(key.7)
+      release(key.7)
+   end if
+
+   if said("K I A",5) then
+      press(key.5)
+      release(key.5)
+      wait 50 ms
+      press(key.8)
+      release(key.8)
+   end if
+
+   if said("report targets",5) then
+      press(key.5)
+      release(key.5)
+      wait 50 ms
+      press(key.9)
+      release(key.9)
+   end if
+
+
+   //Action (unfortunately it's mostly context)
+
+   if said("apply medical") then
+      press(key.6)
+      release(key.6)
+      wait 50 ms
+      press(key.1)
+      release(key.1)
+   end if
+
+   if said("action") then
+      press(key.6)
+      release(key.6)
+   end if
+
+   if said("option 1", 5) then
+      press(key.1)
+      release(key.1)
+   end if
+
+   if said("option 2", 5) then
+      press(key.2)
+      release(key.2)
+   end if
+
+   if said("option 3", 5) then
+      press(key.3)
+      release(key.3)
+   end if
+
+   if said("option 4", 5) then
+      press(key.4)
+      release(key.4)
+   end if
+
+   if said("option 5", 5) then
+      press(key.5)
+      release(key.5)
+   end if
+
+   if said("option 6", 5) then
+      press(key.6)
+      release(key.6)
+   end if
+
+   if said("option 7", 5) then
+      press(key.7)
+      release(key.7)
+   end if
+
+   if said("option 8", 5) then
+      press(key.8)
+      release(key.8)
+   end if
+
+   if said("option 9", 5) then
+      press(key.9)
+      release(key.9)
+   end if
+
+   if said("option 0", 5) then
+      press(key.0)
+      release(key.0)
+   end if
+
+
+   //Formation
+   if said("form column") then
+      press(key.8)
+      release(key.8)
+      wait 50 ms
+      press(key.1)
+      release(key.1)
+   end if
+
+   if said("form staggered column") or said("form double column") then
+      press(key.8)
+      release(key.8)
+      wait 50 ms
+      press(key.2)
+      release(key.2)
+   end if
+
+
+   if said("form wedge") then
+      press(key.8)
+      release(key.8)
+      wait 50 ms
+      press(key.3)
+      release(key.3)
+   end if
+
+   if said("form echelon left") then
+      press(key.8)
+      release(key.8)
+      wait 50 ms
+      press(key.4)
+      release(key.4)
+   end if
+
+   if said("form echelon right") then
+      press(key.8)
+      release(key.8)
+      wait 50 ms
+      press(key.5)
+      release(key.5)
+   end if
+
+   if said("form V") then
+      press(key.8)
+      release(key.8)
+      wait 50 ms
+      press(key.6)
+      release(key.6)
+   end if
+
+   if said("form line") then
+      press(key.8)
+      release(key.8)
+      wait 50 ms
+      press(key.7)
+      release(key.7)
+   end if
+
+   if said("form compact") then
+      press(key.8)
+      release(key.8)
+      wait 50 ms
+      press(key.8)
+      release(key.8)
+   end if
+
+   if said("form delta") or said("form diamond") then
+      press(key.8)
+      release(key.8)
+      wait 50 ms
+      press(key.9)
+      release(key.9)
+   end if
+
+   if said("regroup", 4) then
+      press(key.1)
+      release(key.1)
+      wait 50 ms
+      press(key.1)
+      release(key.1)
+   end if
+
+   if said("advance") then
+      press(key.1)
+      release(key.1)
+      wait 50 ms
+      press(key.2)
+      release(key.2)
+   end if
+
+   if said("stay back") then
+      press(key.1)
+      release(key.1)
+      wait 50 ms
+      press(key.3)
+      release(key.3)
+   end if
+
+   if said("flank left") then
+      press(key.1)
+      release(key.1)
+      wait 50 ms
+      press(key.4)
+      release(key.4)
+   end if
+
+   if said("flank right") then
+      press(key.1)
+      release(key.1)
+      wait 50 ms
+      press(key.5)
+      release(key.5)
+   end if
+
+   if said("stop", 5) then
+      press(key.1)
+      release(key.1)
+      wait 50 ms
+      press(key.6)
+      release(key.6)
+   end if
+
+   if said("wait", 5) or said("hold up", 5) then
+      press(key.1)
+      release(key.1)
+      wait 50 ms
+      press(key.7)
+      release(key.7)
+   end if
+
+
+
+   if said("take cover") or said("find cover") or said("Get to cover") then
+      press(key.1)
+      release(key.1)
+      wait 50 ms
+      press(key.8)
+      release(key.8)
+   end if
+
+   if said("to next waypoint", 3) then
+      press(key.1)
+      release(key.1)
+      wait 50 ms
+      press(key.9)
+      release(key.9)
+   end if
+
+   //Team assignment
+   if said("assign red") then
+      press(key.9)
+      release(key.9)
+      wait 50 ms
+      press(key.1)
+      release(key.1)
+   end if
+
+   if said("assign green") then
+      press(key.9)
+      release(key.9)
+      wait 50 ms
+      press(key.2)
+      release(key.2)
+   end if
+
+   if said("assign blue") then
+      press(key.9)
+      release(key.9)
+      wait 50 ms
+      press(key.3)
+      release(key.3)
+   end if
+
+   if said("assign yellow") then
+      press(key.9)
+      release(key.9)
+      wait 50 ms
+      press(key.4)
+      release(key.4)
+   end if
+
+   if said("assign white") then
+      press(key.9)
+      release(key.9)
+      wait 50 ms
+      press(key.5)
+      release(key.5)
+   end if
+
+   if said("red", 5) then
+      press(key.Shift)
+      wait 50 ms
+      press(key.f1)
+      release(key.Shift)
+      release(key.f1)
+   end if
+
+   if said("green", 5) then
+      press(key.Shift)
+      wait 50 ms
+      press(key.f2)
+      release(key.Shift)
+      release(key.f2)
+   end if
+
+   if said("blue", 5) then
+      press(key.Shift)
+      wait 50 ms
+      press(key.f3)
+      release(key.Shift)
+      release(key.f3)
+   end if
+
+   if said("yellow", 5) then
+      press(key.Shift)
+      wait 50 ms
+      press(key.f4)
+      release(key.Shift)
+      release(key.f4)
+   end if
+
+   if said("white", 5) then
+      press(key.Shift)
+      wait 50 ms
+      press(key.f5)
+      release(key.Shift)
+      release(key.f5)
+   end if
+
+
+end if
